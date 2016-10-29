@@ -23,7 +23,7 @@ public class N_1389_2 {  // 케빈베이컨의 6단계
 		n = Integer.parseInt(str[0]); // 유저의 수
 		m = Integer.parseInt(str[1]); // 친구관계 수
 		map = new int[n + 1][n + 1]; // n*n으로 배열만든다 
-
+		
 		int a = 0;
 		int b = 0;
 		min = 101;  // 최소값 

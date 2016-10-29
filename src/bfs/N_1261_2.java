@@ -13,6 +13,7 @@ class N implements Comparable<N>{
 		this.y = y;
 		this.count = count;
 	}
+	
 	public int compareTo(N n){
 	  if(this.count >n.count){
 		  return 1;

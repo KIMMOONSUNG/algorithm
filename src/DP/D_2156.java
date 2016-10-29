@@ -23,7 +23,7 @@ public class D_2156 {
 	 	   if(d[i]<d[i-3]+a[i-1]+a[i]){ // i꺼를 2잔연속먹었을시에 i-1는 1잔을먹었을거고 i-2번째는 안되고 i-3부터 먹어도되고 안먹어도되고
 	 		   d[i] = d[i-3]+a[i-1]+a[i];
 	 	   }
-	 	  }
+	 	 }
 	    System.out.println(d[n]);
 	}
 }

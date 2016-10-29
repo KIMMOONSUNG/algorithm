@@ -56,7 +56,7 @@ public class N_1261_3 {
 		visit[0][0] = true;
 		int dx[] = { 0, 0, 1, -1 };
 		int dy[] = { 1, -1, 0, 0 };
-
+		
 		while (!q.isEmpty()) {
 			pra p = q.poll();
 
@@ -64,6 +64,7 @@ public class N_1261_3 {
 				System.out.println(p.count);
 				break;
 			}
+			
 			for (int i = 0; i < 4; i++) {
 				int x = p.x + dx[i];
 				int y = p.y + dy[i];

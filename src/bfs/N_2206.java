@@ -10,7 +10,8 @@ class MS {
 	int l;
 	int count;
 }
-public class N_2206 {
+
+public class N_2206 {  //기본적인 q에 클래스 객체 넣어서 하는방법 
 	static int map[][];
 	static int N;
 	static int M;

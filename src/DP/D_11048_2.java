@@ -17,7 +17,7 @@ public class D_11048_2 {
 		}
 		for (int i = 0; i <=n; i++) {
 			for (int j = 0; j <= m; j++) {
-				if (d[i][j + 1] < d[i][j] + a[i][j + 1]) {
+				if (d[i][j + 1] < d[i][j] + a[i][j + 1]) { 
 					d[i][j + 1] = d[i][j] + a[i][j + 1];
 					//System.out.println(d[i][j+1]);
 				}

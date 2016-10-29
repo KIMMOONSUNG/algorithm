@@ -5,45 +5,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class N_9935 {
-	/*
-	public static void main(String[] args) throws IOException {
-		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-		String str = bf.readLine();
-		String boom = bf.readLine();
-		StringBuilder sb = new StringBuilder(); 
-		
-		while (true) { // 이렇게풀면 시간초과 
-			////////////////시간초과 
-			String str2[] = str.split(boom);
-			sb = new StringBuilder();
-			for (int i = 0; i < str2.length; i++) {
-			
-				sb.append(str2[i]);
-			}
-			
-			str = sb.toString();
-			if(!str.contains(boom)){
-				break; 
-			}
-			////////////////////////////
-			//-----------------------------------------//
-			
-			
-			////////////// 시간초과
-			str = str.replace(boom,"");
-			if(!str.contains(boom)){
-				break; 
-			}
-			//////////////
-		}
-		if (str.equals("")) {
-			System.out.println("FRULA");
-		}
-		System.out.println(str);
-
-	}
-	*/
-	
 	 public static void main(String[] args) throws Exception {
 	        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 	        String str = bf.readLine();
@@ -57,10 +18,11 @@ public class N_9935 {
 	            char ch = str.charAt(i);
 	            sb.append(ch);
 	            cur++; 
-	            if (cur>=bombLen && bomb.equals(sb.substring(cur-bombLen))){
-	            	// substring은 cur-bombLen 부터 추츌 
-	                sb.delete(cur-bombLen, cur); //앞~뒤 까지 삭제 
-	                cur -= bombLen; //다시 커서는 그니까 sb길이는 삭제하고의 커서로 돌아가는거지  
+	            if (cur>=bombLen && bomb.equals(sb.substring(cur-bombLen,cur))){ //문자열이 같으면 폭팔 이니 삭제시키고 
+	            	//sub은 (시작지점, 끝 다음 지점)
+	            	// substring은 cur-bombLen 부터 추출 cur-1까지임 .
+	                sb.delete(cur-bombLen, cur); 
+	                cur -= bombLen; //다시 커서는 조정됨.  
 	            }
 	        }
 	         

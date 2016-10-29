@@ -9,17 +9,26 @@ public class D_2293 {
 		int total = sc.nextInt(); //구하고자하는 최종금액
 		int a[] = new int[n + 1]; // 동전종류저장
 		int d[] = new int[total + 1]; // 동전 합들을 저장
-		for (int i = 1; i <= n; i++) {
+		for (int i = 1; i <= n; i++){
 			a[i] = sc.nextInt();      
 		}
 		d[0] = 1;
-		for (int i = 1; i <= n; i++) { // coin을 위한
-			for (int totalcoin = 1; totalcoin <= total; totalcoin++) { // K까지의 합이니까 동전의 값을 K까지 하나씩올라가며 
-				if (totalcoin >= a[i]) { //동전종류가 구하고자하는 최종 금액보다 작거나 같아야함 
+		/* 이것도가능하고 
+		for(int i = 1; i <= n; i++) { // coin을 위한
+			for(int totalcoin = 1; totalcoin <= total; totalcoin++) { // total까지의 합이니까 동전의 값을 total까지 하나씩올라가며 
+				if (totalcoin >= a[i]) { //동전종류가 구하고자하는 최종 금액보다 작거나 같아야함
+					//int coin = totalcoin - a[i];
 					d[totalcoin] += d[totalcoin - a[i]]; 
 				}
 			}
 		}
+		*/
+		for(int i =1; i<=n; i++){
+			for(int totalcoin = a[i]; totalcoin <=total; totalcoin++){
+				d[totalcoin]+=d[totalcoin-a[i]];
+			}
+		}
+		
 		System.out.println(d[total]);
 	}
 }

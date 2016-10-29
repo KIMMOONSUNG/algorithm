@@ -40,7 +40,6 @@ public class N_1981 {
 		for (int min = 0; min < 199; min++){
 			int smax = min;
 			int emax = min + mind;
-            System.out.println("min::"+min);
 			while (smax <= emax) { // 이분탐색 !!
 				int max = smax + (emax - smax) / 2;
 				front = 0;
@@ -60,7 +59,6 @@ public class N_1981 {
 					int y = node % 1000;
 
 					if (x == n - 1 && y == n - 1) {
-						System.out.println("답:"+x+","+y+"일때"+max+"/"+min);
 						ava = true;
 						break;
 					}
@@ -71,7 +69,6 @@ public class N_1981 {
 								&& visit[xx][yy] ==false) {
 							queue[rear++] = xx * 1000 + yy;
 							visit[xx][yy] = true;
-							System.out.println(xx+","+yy+"일때"+max+"/"+min);
 						}
 						
 					}

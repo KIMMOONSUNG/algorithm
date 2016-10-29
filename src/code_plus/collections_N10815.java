@@ -6,8 +6,10 @@ import java.io.InputStreamReader;
 import java.util.HashSet;
 import java.util.StringTokenizer;
 
-//SET
+// 있는지 없는지 구함 ->SET
 //-> 순서보장이 필요없어서 HashSet사용 (add할때 정수형으로 변환후 넣어줘야함)
+
+
 public class collections_N10815 { // 숫자 카드
 	public static void main(String args[]) throws IOException {
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));

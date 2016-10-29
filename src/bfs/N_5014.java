@@ -29,7 +29,7 @@ public class N_5014 {
 			now1 = q.poll();
 			for (int i = 0; i < 2; i++) {
 				int now2 = now1 + d[i];
-				if (now2 >= 0 && now2 <= F && visit[now2] == false) {
+				if (now2 > 0 && now2 <= F && visit[now2] == false) {
 					visit[now2] = true;
 					q.offer(now2);
 					map[now2] = map[now1] + 1;

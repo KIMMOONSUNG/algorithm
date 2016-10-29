@@ -12,7 +12,6 @@ public static void main(String[] args) {
 		p[i] = sc.nextInt(); //앞에새끼한테 세트메뉴i개 팔때의 가격
 	}
 	
-	
 	for(int i=1; i<=num; i++){ //num개를 팔때 
       for(int j=1; j<=i; j++){ 
            if(d[i]< p[j] +d[i-j]){//최대구하는거라서 비교하는거둘다 d[i]값인데 원래 d값과 현재 for문돌아갈때의 d값 비교해서 현재 꺼가 크면 조건만족
@@ -21,8 +20,6 @@ public static void main(String[] args) {
            }
       }
 	}
-	
-	System.out.println(d[num]);
-	
-}
+	System.out.println(d[num]);	
+ }
 }

@@ -18,7 +18,7 @@ public class N_1946_2 {
 	                rank[index] = sc.nextInt(); //면접 심사성적
 	            }
 	            min = rank[1]; // 처음 1부터 시작 
-	            
+	           
 	            for (int j = 2; j <= m; j++){
 	                if (rank[j]<min) { // 비교했는데 면접심사성적순위가 더 좋다면 
 	                    cnt++; 

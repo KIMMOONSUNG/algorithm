@@ -9,7 +9,7 @@ public class N_11047 {
 	BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 	String str[] = bf.readLine().split(" ");
 	int n = Integer.parseInt(str[0]); // 동전종류개수
-	int k = Integer.parseInt(str[1]); // 가격 
+	int k = Integer.parseInt(str[1]); // 만들어야할 가격 
 	int coin[] = new int [n];
 	for(int i =n-1; i>=0; i--){ // 동전을 큰거부터 coin에 넣고 
 		coin[i] = Integer.parseInt(bf.readLine());
@@ -28,5 +28,5 @@ public class N_11047 {
 	 }
 	}
 	System.out.println(count);
-}
+ }
 }

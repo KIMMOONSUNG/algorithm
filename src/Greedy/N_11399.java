@@ -28,7 +28,7 @@ public class N_11399 { // ATM -> 그리디알고리즘이용
 	//// 2번째 방법 그리디 ////
 	int temp =0;
 	for(int i =0; i<n-1; i++){  // bubblesort //
-		for(int j=0; j<n-1-i; j++){
+		for(int j=0; j<(n-1)-i; j++){
 			if(time[j]>time[j+1]){
 				temp = time[j];
 				time[j] = time[j+1];
@@ -45,5 +45,5 @@ public class N_11399 { // ATM -> 그리디알고리즘이용
 	}
 	System.out.println(total);
 	////////////////////
-}
+ }
 }

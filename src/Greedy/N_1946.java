@@ -6,7 +6,9 @@ import java.util.Scanner;
 
 public class N_1946 {
 	public static void main(String[] args) {
-		/// BufferedReader로 하면 런타임 에러가 남  // 어려운방법 
+		/// BufferedReader로 하면 런타임 에러가 남  // 
+		
+		
 		Scanner sc=  new Scanner(System.in);
 		int t = sc.nextInt();
 		for(int p =0; p<t; p++){
@@ -18,7 +20,7 @@ public class N_1946 {
 			}
 			////////////////////////////////////////////////
 			// 앞에 그러니까 서류가랭크별로 배열이되고 면접은 그대로 따라 정렬된다 .
-		      Arrays.sort(grade, new Comparator<int[]>() {
+		      Arrays.sort(grade, new Comparator<int[]>(){
 	                @Override
 	                public int compare(int[] o1, int[] o2) {
 	                    return o1[0] - o2[0]; // [0]은 [0]에있는것이 정렬되고 [0]이 거기에 맞게 따라오고 
@@ -33,8 +35,8 @@ public class N_1946 {
 	                    rank = grade[i][1];
 	                    cnt++;
 	                }
-	            }
-	            System.out.println(cnt);        			
+	            }	            
+	            System.out.println(cnt);
 		}
 	}
 }

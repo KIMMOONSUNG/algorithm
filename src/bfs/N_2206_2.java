@@ -11,7 +11,7 @@ class c_2206_2 {
 	int count;
 }
 
-public class N_2206_2 {
+public class N_2206_2 {  //큐 라이브러리안쓰고 배열로 하는방법 
 	static int N;
 	static int M;
 	static int map[][];
@@ -60,6 +60,7 @@ public class N_2206_2 {
 	}
 
 	static void bfs() {
+		
 		int dx[] = { 0, 0, 1, -1 };
 		int dy[] = { 1, -1, 0, 0 };
 		int index2 = 0;
@@ -102,7 +103,7 @@ public class N_2206_2 {
 					}
 					qq(m2.x, m2.y, m2.length, m2.count);
 				}
-			}
+			}			
 			index2++;
 			if(index2 > 100){//배열 1000001 해주면 낭비 니까 인덱스 100넘으면 0으로
 				index2 =0;
