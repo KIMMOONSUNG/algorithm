@@ -38,7 +38,7 @@ public class sort_N11650{
 	public static void main(String[] args) throws IOException{
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 		int n = Integer.parseInt(bf.readLine());
-		c[] a = new c[n]; // class 배열 객체
+		c[] a = new c[n]; // class 배열 객체 생성
 		
 		for(int i =0; i<n; i++){
 			String[] num = bf.readLine().split(" ");
@@ -46,12 +46,17 @@ public class sort_N11650{
 			int y = Integer.parseInt(num[1]);
 			a[i] = new c(x,y); // 위에서 만든 a에 넣는다 x,y 넣어
 		}
+		
 		Arrays.sort(a); //정렬시키고 
 		
 		StringBuilder sb = new StringBuilder(); 
 		for(int i =0; i<n; i++){
-			c p = a[i];	 // 다시 객체 만들고 
-			sb.append(p.x +" "+ p.y +"\n"); //append로 이어서 
+			/* 이렇게 하던가 
+			c p = a[i];	 // 다시 객체 만들고
+			sb.append(p.x +" "+ p.y +"\n"); //append로 이어서
+			*/
+			
+			sb.append(a[i].x+" "+a[i].y + "\n");
 		}
 		System.out.println(sb); //출력
 	}

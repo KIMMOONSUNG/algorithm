@@ -26,7 +26,7 @@ public class N7576 { // 토마토
 	int n = Integer.parseInt(st.nextToken());
 	int map[][] = new int[n][m];
 	boolean visit[][]= new boolean[n][m];
-	 int confirm [][] = new int [n][m];
+	 boolean check [][] = new boolean [n][m];
 	 int resulttime =0;
 	 int dx[] = {0,0,1,-1};
 	 int dy[] = {1,-1,0,0};
@@ -46,17 +46,19 @@ public class N7576 { // 토마토
 			int x = p.x+dx[i];
 			int y = p.y+dy[i];
 			int time = p.time;
-			if(x>=0 && y>=0 && x<n && y<m && (map[x][y]==0||map[x][y]==1) &&visit[x][y]==false){
-			  	visit[x][y] = true;
-			  	confirm[x][y] =7; // 
-			  	q.offer(new n_7576(x, y, time+1));
-			  	resulttime = Math.max(resulttime, time+1);
+			if(x>=0 && y>=0 && x<n && y<m && (map[x][y]==0||map[x][y]==1)){
+				if(visit[x][y]==false){
+			  	 visit[x][y] = true;
+			  	 check[x][y] = true; // 
+			  	 q.offer(new n_7576(x, y, time+1));
+			  	 resulttime = Math.max(resulttime, time+1);
+				}
 			}
 		}
 	}
 	for(int i =0; i<n; i++){
 		for(int j =0; j<m; j++){
-		  if(map[i][j] ==0 && confirm[i][j] !=7){ // 0인곳중 바뀐값이 7이아닌곳은 토마토가 모두 익지않은 상황
+		  if(map[i][j] ==0 && check[i][j]==false){ // 0인곳중 바뀐곳이아닌곳(들르지못한곳)은 토마토가 모두 익지않은 상황
 			  resulttime = -1;
 		  }
 		}

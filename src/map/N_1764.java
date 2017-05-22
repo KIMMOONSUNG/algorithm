@@ -31,7 +31,6 @@ public class N_1764 {
 			v+=1;
 			hm.put(name, v);
 		}
-		
 	}
 	
 	ArrayList<String> a = new ArrayList<String>();

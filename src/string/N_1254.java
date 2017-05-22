@@ -31,5 +31,5 @@ public class N_1254 { // 팰린드롬 만들기 -> 원래 글자하나하나에 
 	     sb.append(s);
 	     return sb.reverse().toString();
 	 }
-	  
+	 
 }

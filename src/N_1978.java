@@ -28,5 +28,5 @@ public class N_1978 {
 	}
 	System.out.println(count);
 	
-}
+ }
 }

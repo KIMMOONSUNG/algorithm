@@ -31,7 +31,7 @@ class a99 implements Comparable<a99> {
 		}
 	}
 }
-public class N_1981_2 {
+public class N_1981_2 { //실패
 	static int n;
 	static int map[][];
 	static int wmap[][];
@@ -72,6 +72,7 @@ public class N_1981_2 {
 			 cnt = max - min; 
 			 pq.offer(new a99(x,y,max,min,cnt));
 			}
+		 
 	  }
 	}
 	

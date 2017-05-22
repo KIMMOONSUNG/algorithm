@@ -30,7 +30,6 @@ public class N_1981 {
 		}
 		BFS();
 	}
-
 	static void BFS() {
 		int dx[] = { 0, 0, 1, -1 };
 		int dy[] = { 1, -1, 0, 0 };
@@ -40,7 +39,7 @@ public class N_1981 {
 		for (int min = 0; min < 199; min++){
 			int smax = min;
 			int emax = min + mind;
-			while (smax <= emax) { // 이분탐색 !!
+			while (smax <= emax){ // 이분탐색 !!
 				int max = smax + (emax - smax) / 2;
 				front = 0;
 				rear = 0;
@@ -57,7 +56,7 @@ public class N_1981 {
 					int node = queue[front++];
 					int x = node / 1000;
 					int y = node % 1000;
-
+					
 					if (x == n - 1 && y == n - 1) {
 						ava = true;
 						break;
@@ -69,11 +68,10 @@ public class N_1981 {
 								&& visit[xx][yy] ==false) {
 							queue[rear++] = xx * 1000 + yy;
 							visit[xx][yy] = true;
-						}
-						
+						}					
 					}
-					
 				}
+				
 				if (ava == true) {
 					if (mind > (max - min)) {
 						mind = max - min;
