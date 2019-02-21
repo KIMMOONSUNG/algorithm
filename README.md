@@ -31,6 +31,7 @@ public class Main {
 출력 -10,-20 이  // 이아아 ㅏㅇ아ㅏㅇ 잠시만 
 /////////////
 
+//ㅂㅏ꿨엉 
 public class Main{
 	public static void main(String[] args) {
 		int[] arr = { -10, -3, 5, 6, -20 }; 
@@ -40,14 +41,22 @@ public class Main{
 	
 	public static void findMaxProduct(int[] arr) {
 	   int max = Integer.MIN_VALUE;
+	   int num1 = 0;
+	   int num2 = 0;
 	   
 	   for(int i =0; i<arr.length; i++) {
 		   for(int j=i+1; j<arr.length; j++) {
-			   max = Math.max(max,(arr[i] * arr[j])); 
+			   
+			   if(max < (arr[i] * arr[j])) {
+				   num1 = arr[i];
+				   num2 = arr[j];
+			   }
+			   
+			   max = Math.max(max,(arr[i] * arr[j]));
 		   }
 	   }
-
-	   System.out.println(max); // 최대 출력
+       
+	   System.out.println(num1+","+num2); // 최대정수 출력
 	   
 	}
 	
