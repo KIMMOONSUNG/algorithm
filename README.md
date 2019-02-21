@@ -24,6 +24,7 @@ public class Main {
 
 ->> 저 5개중에 두수 곱이 최대인거 구하는거구나  잠시만 
 정 수 두개 구하기 곱이 최대인 정수 
+출력 -10,-20 이
 
 public class Main{
 	public static void main(String[] args) {
