@@ -34,17 +34,17 @@ public class Main{
 	
 	public static void findMaxProduct(int[] arr) {
 	   int max = Integer.MIN_VALUE;
-	   for(int i =0; i<arr.length; i++){
-		   for(int j=0; j<arr.length; j++){
-			   if(i==j) continue;
+	   
+	   for(int i =0; i<arr.length; i++) {
+		   for(int j=i+1; j<arr.length; j++) {
 			   max = Math.max(max,(arr[i] * arr[j])); 
 		   }
 	   }
-	   
-	   
+
 	   System.out.println(max); // 최대 출력
 	   
 	}
+	
 	
 }
 
