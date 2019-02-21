@@ -132,4 +132,54 @@ public interface Arithmetic {
 8
 //////////////////////////////////////////////
 
+package problem03;
 
+public class Main {
+	
+	public static void main(String[] args) {
+		Money five  = new Money(5);
+        Money two   = new Money(2);
+        Money three = new Money(3);
+        Money ten   = new Money(10);
+        
+        if(five.equals(two.add(three)) && three.equals(five.minus(two)) && ten.equals(five.multiply(two)) && two.equals(ten.devide(five))){
+            System.out.println("Money Class 구현 완료");
+        }
+	}
+}
+
+package problem03;
+
+public class Money {
+	
+	//
+	// 클래스 구현을 완성 하십시오.
+	// 
+
+	
+	private int amount;
+	
+	public Money(int amount) {
+	}
+
+	public Money add(Money money) {
+		return null;
+	}
+
+	public Money minus(Money money) {
+		return null;
+	}
+
+	public Money multiply(Money money) {
+		return null;
+	}
+
+	public Money devide(Money money) {
+		return null;
+	}
+}
+
+///////////////////////////////////////////////////
+답
+Money Class 구현
+////////////////////////////////////////////////////
