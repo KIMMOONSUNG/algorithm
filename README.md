@@ -42,26 +42,12 @@ public class Main{
 	   
 	   for(int i =0; i<arr.length; i++) {
 		   for(int j=i+1; j<arr.length; j++) {
-			   
-			   if(max < (arr[i] * arr[j])) {
+			   			   if(max < (arr[i] * arr[j])) {
 				   num1 = arr[i];
 				   num2 = arr[j];
 			   }
 			   
-			   max = Math.max(max,(arr[i] * arr[j]));
-		   }
-	   }
-       
-	   System.out.println(num1+","+num2); // 최대정수 출력
-	   
-	}
-	
-	
-}
-
-
-
-//////////////////////////////////////////
+			   max = Math.max(max,(arr[i//////////////////////////////////////////
 
 
 
